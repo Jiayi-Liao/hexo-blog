@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.liaojiayi.com/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/archives/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/about/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/photo-website/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/%E6%91%84%E5%BD%B1/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/CEP-In-Flink-2/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/Big-Data-Computation-Engine/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/CEP-In-Flink-1/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/Spark-WeakReference/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/scuba-junkie-1/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/%E6%97%85%E8%A1%8C/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/flink-IoT/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/flink-savepoint-vs-checkpoint/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/flink-checkpoint/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/MapFailed/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/JVM/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/oracle-cep/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tools/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/Linux/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/calcite/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/bitmap/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/Distributed-Storage/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/aerospike-write/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/hs-err-pid-log/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/flink-exactly-once/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/aerospike/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/categories/index.html</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/index.html</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/archives/page/2/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Aerospike/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Bitmap/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/CEP/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Calcite/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Checkpoint/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Exactly-once/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Flink/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/IoT/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/JVM/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Linux/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Memory/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/SQL/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Spark/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/Tools/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/%E6%91%84%E5%BD%B1/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/%E6%97%85%E8%A1%8C/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.liaojiayi.com/tags/%E6%BD%9C%E6%B0%B4/</loc>
+  <lastmod>2019-02-18T12:29:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
