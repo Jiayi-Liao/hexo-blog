@@ -17,9 +17,17 @@ I have to start with what I read and what I learn recently, which may be really 
 
 ## Why Cloud Service
 
-Obviously, it's much easier and more efficient for corporations to build their own business with cloud service. And let's take a look at how we benefit from 
+Obviously, it's much easier and more efficient for corporations to build their own business with cloud service. And let's take a look at how we benefit from cloud service:
 
-## Aggregation vs Disaggregation
+* Budget: With good knowledge of your business, the tech architecture you're using, the prediction towards the future, you may be able to purchase servers from data center directly with a lower budget. However, for most companies using data centers, they often spend a lot of time on purchasing, installing, testing and maintaining the servers, which is not usually the first priority. 
+* Efficiency: To deal with growing business, you need more servers to keep the service stable and it was such a pain in every operation developer's head. With cloud service you can add and remove any servers you want and all of these happen in a few seconds which allows you to deal with your business elasically.
+
+
+## Why Disaggregation
+
+* Network is not bottleneck anymore, at least for most business. And time spent on cpu is much more than on  network and that's why we can use remote storage and not pay too much.
+* Cloud service 
+
 
 ## How to Implement
 
