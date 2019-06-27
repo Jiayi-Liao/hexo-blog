@@ -1,10 +1,6 @@
-# Disaggregation of Storage and Computation on Spark
+# Disaggregation of Storage and Computation 
 
-In the end of last century, a company bought PC desktop applications for human resources management. In the early days of the 21st century, this company registered an account on online system which is dedicated to the human resources management and paid for the service annually. Nowadays, the company is willing pay for the mobile application of human resources management due to the popularity of the smart phones. Obviously, the To-Business service evolved with the development of the architecture of technology, so does the data processing engine.  
-
-
-Spark on Tungsten is a typical example for this. The background was the exchange of the network I/O and CPU I/O, which makes CPU become the new bottleneck of the large scale data processing. These days, the cloud service becomes a must-to-do thing for almost every corporation and after I watched some talks, read some papers and then, I find that the disaggregation of storage and computation is the future of data processing based on cloud service.   
-
+I've read some tech designs about disaggregation on Spark and I'm going to list them first.
 
 ## References
 
@@ -15,21 +11,24 @@ I have to start with what I read and what I learn recently, which may be really 
 * [SOS: Optimizing Shuffle I/O](https://databricks.com/session/sos-optimizing-shuffle-i-o): A Spark+AI Summit talk shared by the same software engineer from Facebook.
 * [Improving Spark Shuffle Reliability](https://docs.google.com/document/d/1uCkzGGVG17oGC6BJ75TpzLAZNorvrAU3FRd2X-rVHSM/edit#heading=h.btqugnmt2h40)
 
-## Why Cloud Service
-
-Obviously, it's much easier and more efficient for corporations to build their own business with cloud service. And let's take a look at how we benefit from cloud service:
-
-* Budget: With good knowledge of your business, the tech architecture you're using, the prediction towards the future, you may be able to purchase servers from data center directly with a lower budget. However, for most companies using data centers, they often spend a lot of time on purchasing, installing, testing and maintaining the servers, which is not usually the first priority. 
-* Efficiency: To deal with growing business, you need more servers to keep the service stable and it was such a pain in every operation developer's head. With cloud service you can add and remove any servers you want and all of these happen in a few seconds which allows you to deal with your business elasically.
+I noticed that more and more developers and business start focusing on the remote storage like OSS instead of local disk and that's why I am writing now.
 
 
 ## Why Disaggregation
 
-* Network is not bottleneck anymore, at least for most business. And time spent on cpu is much more than on  network and that's why we can use remote storage and not pay too much.
-* Cloud service 
+* Network is not bottleneck anymore, at least for most business. And time spent on cpu is much more than on  network and that's why we can use remote storage with just a little more cost. This is kind of cliche because Spark already made a big change(Spark Tungsten) several years ago.
+* Cloud service providers provide OSS like S3, which is much cheaper than the expenses of HDFS and local disks. Although there are probably some throughput issues, it's still a good choice for most analysists. And we all know that data is where value comes from and that's why companies trying to collect all the data no mather whether they are useful or not...So the budget is also growing, which means corporations have to find cheaper storage to store cold data(less value density).
+* Budget again. Assume that your business is growing and you need to increase the computation ability on YARN, what are you going to do? I think you're going to add new servers into the cluster with the same cpu、memory and disk, but the expenses on disk are not what you want, right? By disaggregating the storage and computation you can only enhance the storage or computation individually.
 
 
-## How to Implement
+## Disaggregation on Spark
+
+Basically Spark is an processing engine, which means that it's only responsible for computation and writing/reading from S3 is already supported. However, there're still resources taken up by local disk like cache/shuffle. For cache it's like 
 
 
 ## Thoughts In My Mind
+
+In the end of last century, a company bought PC desktop applications for human resources management. In the early days of the 21st century, this company registered an account on online system which is dedicated to the human resources management and paid for the service annually. Nowadays, the company is willing pay for the mobile application of human resources management due to the popularity of the smart phones. Obviously, the To-Business service evolved with the development of the architecture of technology, so does the data processing engine.  
+
+
+Spark on Tungsten is a typical example for this. The background was the exchange of the network I/O and CPU I/O, which makes CPU become the new bottleneck of the large scale data processing. These days, the cloud service becomes a must-to-do thing for almost every corporation and after I watched some talks, read some papers and then, I find that the disaggregation of storage and computation is the future of data processing based on cloud service.   
