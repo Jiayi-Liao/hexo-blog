@@ -11,7 +11,6 @@ categories:
 keywords:
   - HBase
   - Transaction
-description: '最近做了一些关于HBase Transaction的研究，分享给你们。'
 
 ---
 起初是因为看了PingCAP的几篇博客，然后知道了所谓的NewSQL。后来发现自己对于OLTP中的一些技术点并不是特别了解，就决定从自己稍微熟悉一点的技术栈开始做一些探究。所以，这是数据库系列中的第一篇 :)。

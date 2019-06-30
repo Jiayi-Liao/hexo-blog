@@ -19,7 +19,7 @@ def blogpic(c, src):
 def upload(c, src, lang):
     if lang == "en":
         dest = "/server/hexoen/source/_posts/"
-    elif lange == "ch":
+    elif lang == "ch":
         dest = "/server/hexo/source/_posts/"
     else:
         exit(100)
