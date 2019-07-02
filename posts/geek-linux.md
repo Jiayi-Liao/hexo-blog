@@ -131,12 +131,18 @@ CPU也有若干种：
 * tcpdump: 抓包工具。
 
 
+## CPU使用率
 
+CPU使用率分为以下几种：
 
+* 用户CPU使用率：说明应用程序比较繁忙。
+* 内核CPU：说明系统内核繁忙。
+* 等待I/O CPU: 说明系统和硬件交互时间长。
+* 软中断和硬中断CPU: 说明系统发生大量中断。
 
+![cpu](http://www.liaojiayi.com/assets/geek-11.png)
 
-
-
+![cpu-2](http://www.liaojiayi.com/assets/geek-11-2.png)
 
 
 
