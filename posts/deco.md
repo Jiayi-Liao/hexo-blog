@@ -1,5 +1,5 @@
 ---
-title: My Decompression Sickness
+title: Decompression Sickness
 date: 2019-06-12 03:24:13
 tags: Dive
 keywords: Dive
