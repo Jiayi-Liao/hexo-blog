@@ -16,5 +16,19 @@ categories: Big Data Computation Engine
 ***
 
 * [WiscKey: Separating Keys from Values
-in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf): 文章写道，由于SSD的速度和并行度的提高，没有必要再对LSM中的文件进行排序，并且在key小value大的前提下，提出了一个降低LSM写放大的vlog方案。
+in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf): 基于SSD和小key大value的事实：
 
+	* LSM file内部不再排序，更好的利用SSD的随机读的性能，减少了排序的代价。  
+	* 引入Vlog的结构，减少写放大，定时检查vlog中数据的有效性。
+
+***
+
+* [HashKV: Enabling Efficient Updates in KV Storage via Hashing](https://www.usenix.org/system/files/conference/atc18/atc18-chan.pdf): 基于 WiscKey 的结构做了一些优化：
+
+	* 通过对数据进行分区，将数据分为了热区和冷区，这样因为热区有频繁的update，可以及时的触发热区的gc。
+	* 小value的数据可以直接写入到LSM file中。
+
+	
+***
+
+* [SOS: Optimizing Shuffle I/O](https://vimeo.com/274418771): 基于大规模shuffle做了一些优化，主要是针对map多，数据小而碎，在 map 和 reduce 的中间加入了一些组件和 failover 的一些操作。
