@@ -55,3 +55,5 @@ date: 2016-07-22 00:33:09
 [771. Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/): Easy。
 [1103. Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people/): Easy。
 [1104. Path In Zigzag Labelled Binary Tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/): 比较有意思的一道题。
+[1093. Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/): Easy.
+[1094. Car Pooling](https://leetcode.com/problems/car-pooling/): Easy.

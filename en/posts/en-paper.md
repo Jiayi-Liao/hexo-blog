@@ -3,7 +3,6 @@ title: Paper Notebook
 date: 2018-05-08 22:29:10
 tags: Data
 keywords: data
-description: Paper Notebook
 categories: Big Data Computation Engine
 ---
 
@@ -23,4 +22,15 @@ Notes for my paper reading.
 in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf): Two points base on SSD and Key-Value pair(small size key, big size value):
 
 	* LSM file without sorting: based on the efficiency of random read on SSD, cost on sorting is more.
-	* Introduce Vlog structure to reduce the writing amplification.
+	* Introduce Vlog structure to reduce the writing amplification and periodically check the availability of the data in Vlog.
+
+***
+
+* [HashKV: Enabling Efficient Updates in KV Storage via Hashing](https://www.usenix.org/system/files/conference/atc18/atc18-chan.pdf): Based on WiscKey, but with some improvements.
+
+	* Seperating hot data and cold data by partitioning data and find the hottest/coldest partition(to decide the frequency of gc).
+	* KV pair with small value will be directly stored in LSM file.
+
+***
+
+* [SOS: Optimizing Shuffle I/O](https://vimeo.com/274418771): Optimization on large-scale shuffle scenarios. 
