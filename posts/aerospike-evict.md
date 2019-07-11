@@ -1,10 +1,10 @@
-title: Aerospike - Evict机制
+title: Aerospike(3) - Evict机制
 author: Liao Jiayi
 date: 2019-03-03 16:09:21
 tags:
   - Aerospike
 articleId: aerospike-evict
-categories: Distributed Storage
+categories: Aerospike
 keywords:
   - Aerospike
   - aerospike
@@ -55,7 +55,7 @@ void-time是由**evict-tenths-pct**决定的threshold bucket的时间戳，这�
 * [https://discuss.aerospike.com/t/eviction-mechanisms-in-aerospike/2854](https://discuss.aerospike.com/t/eviction-mechanisms-in-aerospike/2854)
 
 
-![加一Blog][2]
 
-  [2]: http://www.liaojiayi.com/assets/jiayi_end_qr.png
+
+
   [1]: http://www.liaojiayi.com/assets/as-evict.png

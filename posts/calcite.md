@@ -5,14 +5,13 @@ tags:
   - Calcite
 articleId: calcite
 categories:
-  - Big Data Computation Engine
+  - Calcite
 keywords:
   - calcite
   - SQL
   - SQL解析
   - Flink
   - 大数据
-description: 'Calcite作为大数据框架中应用最广泛的SQL解析器,本文对Calcite的整个解析过程做了源码解读'
 date: 2018-07-20 14:49:03
 ---
 ### 最通用的SQL解析框架 - Calcite

@@ -3,13 +3,12 @@ author: Liao Jiayi
 tags:
   - SQL
 articleId: oracle-cep
-categories: Big Data Computation Engine
+categories: Apache Flink CEP
 keywords:
   - SQL
   - CEP
   - Oracle SQL
   - Flink CEP
-description: 本文描述了Oracle在CEP SQL语法上的一些规则，Flink和calcite基于这个规则做了相关的实现和拓展。
 date: 2018-08-25 07:08:40
 ---
 实时处理中自然少不了CEP这个重量级功能。其实已经有不少成熟的框架实现了CEP，如[Github siddhi](https://github.com/wso2/siddhi)和[EsperTech](http://www.espertech.com/)，但他们使用了特有的语法来做到开发者的友好交互。那么，把CEP的功能加入到万能的SQL中，是不是很有意思呢？  

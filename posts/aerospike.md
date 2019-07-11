@@ -1,8 +1,8 @@
-title: Aerospike学习笔记
+title: Aerospike(1) - Introduction
 tags:
   - Aerospike
 articleId: aerospike
-categories: Distributed Storage
+categories: Aerospike
 keywords:
   - Aerospike
   - Aerospike写机制

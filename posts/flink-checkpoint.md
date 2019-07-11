@@ -5,7 +5,7 @@ tags:
   - Checkpoint
 articleId: flink-checkpoint
 categories:
-  - Big Data Computation Engine
+  - Apache Flink
 keywords:
   - Checkpoint
   - Flink Checkpoint

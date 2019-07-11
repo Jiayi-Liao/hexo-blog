@@ -5,7 +5,7 @@ tags:
   - Flink
   - Checkpoint
 categories:
-  - Big Data Computation Engine
+  - Apache Flink
 keywords:
   - Flink
   - Savepoint

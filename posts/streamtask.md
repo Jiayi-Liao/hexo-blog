@@ -3,7 +3,7 @@ title: Flink - StreamTask With Mailbox
 date: 2019-05-13 23:00:19
 tags: Flink
 keywords: Flink
-categories: Big Data Computation Engine
+categories: Apache Flink
 ---
 
 

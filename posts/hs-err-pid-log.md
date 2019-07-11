@@ -4,7 +4,7 @@ tags:
   - Memory
   - Linux
 articleId: linux-hs_err_pid
-categories: Linux
+categories: JVM
 date: 2018-04-11 20:28:03
 ---
 {% codeblock %}

@@ -4,7 +4,7 @@ tags:
   - Bitmap
 articleId: bitmap
 categories:
-  - Distributed Storage
+  - 未分类技术文章
 keywords:
   - bitmap
   - bitmap原理

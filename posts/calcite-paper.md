@@ -4,7 +4,7 @@ date: 2019-05-11 14:47:41
 tags: calcite
 keywords: calcite
 description:
-categories: Big Data Computation Engine
+categories: Calcite
 ---
 最近在搭建一个SQL引擎，正好再次拜读了一下Calcite的paper(不得不吐槽一下calcite的相关资料确实有些少)。[原文地址](https://arxiv.org/abs/1802.10233)。以前也写过calcite相关的代码解析，不过有些浅显了，[SQL解析框架 - Calcite](http://www.liaojiayi.com/calcite/)。
 

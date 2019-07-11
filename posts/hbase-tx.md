@@ -7,7 +7,7 @@ tags:
   - HBase
 articleId: hbase-tx
 categories:
-  - Big Data Computation Engine
+  - Database
 keywords:
   - HBase
   - Transaction
@@ -54,8 +54,5 @@ HBase性能高，适合OLAP查询/计算。传统数据库MySQL支持事务性�
 #### Durability
 至于这两部分，HBase目前倒也可以达到标准。
 
-***
 
-当然，已经有若干个线程的框架支持HBase的事务性，如[Apache Tephra](http://tephra.incubator.apache.org/)，感兴趣的可以自行研究。不出意外的话，我在这周会再写一篇这个的系列的文章，如果喜欢就关注下面的公众号吧！
 
-![Jiayi Blog](https://user-gold-cdn.xitu.io/2019/4/2/169d9ebd3e053fd7?w=2876&h=1522&f=png&s=471461)

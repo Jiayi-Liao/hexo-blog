@@ -1,9 +1,9 @@
-title: Aerospike笔记（二）- 写机制
+title: Aerospike(2) - 写机制
 author: Liao Jiayi
 tags:
   - Aerospike
 articleId: aerospike2
-categories: Distributed Storage
+categories: Aerospike
 keywords:
   - Aerospike
 description: 本文描述了Aerospike的写机制以及其中存在的问题

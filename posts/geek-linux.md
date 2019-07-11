@@ -3,7 +3,7 @@ title: Linux性能优化实战笔记
 date: 2019-05-27 21:15:42
 tags: Linux
 keywords: Linux
-categories: Linux
+categories: Notes
 ---
 之前被推荐了极客时间的这个课程，想想也是蛮需要的，在这里记录一下自己对每节的总结和思考。
 

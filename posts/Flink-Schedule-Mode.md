@@ -4,10 +4,9 @@ date: 2019-03-18 16:49:08
 tags:
   - Flink
 articleId: flink-schedule-mode
-categories: Big Data Computation Engine
+categories: Apache Flink
 keywords:
   - Apache Flink
-  - Flink CEP
 ---
 
 Apache Flink中对流式数据和批数据的资源调度模式是不一样的。这周的周更博客，由于有事情耽搁，想的一些东西并没有时间做足够的整理，所以写的话题和内容有些简单，仅做了解。

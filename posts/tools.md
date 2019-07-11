@@ -4,9 +4,12 @@ tags:
   - Tools
 articleId: tools
 categories:
-  - Linux
+  - JVM
 date: 2018-07-22 00:33:09
 ---
+
+## 此文停更。。。工具实在是太多了==
+
 ### 常用调试工具
 我在工作中常用的工具列表:
 

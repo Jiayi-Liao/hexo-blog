@@ -5,7 +5,7 @@ tags:
   - CEP
 articleId: cep-in-flink-1
 categories:
-  - Big Data Computation Engine
+  - Apache Flink CEP
 keywords:
   - Flink
   - Flink CEP
@@ -86,8 +86,6 @@ Pattern<Event, ?> pattern = Pattern.<Event>begin("start").where(new SimpleCondit
 
 
 
-![加一Blog][2]
 
-  [2]: http://www.liaojiayi.com/assets/jiayi_end_qr.png
 
   [1]: http://www.liaojiayi.com/assets/NFA-Structure-Example.png

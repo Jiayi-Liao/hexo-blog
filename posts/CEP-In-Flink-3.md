@@ -5,7 +5,7 @@ tags:
   - CEP
 articleId: cep-in-flink-3
 categories:
-  - Big Data Computation Engine
+  - Apache Flink CEP
 keywords:
   - Flink
   - Flink CEP
@@ -147,13 +147,7 @@ protected abstract EventId getPruningId(Collection<Map<String, List<EventId>>> m
 * [SkipPastLastStrategy.java](https://github.com/apache/flink/blob/master/flink-libraries/flink-cep/src/main/java/org/apache/flink/cep/nfa/aftermatch/SkipPastLastStrategy.java)
 * [SkipToNextStrategy.java](https://github.com/apache/flink/blob/master/flink-libraries/flink-cep/src/main/java/org/apache/flink/cep/nfa/aftermatch/SkipToNextStrategy.java)
 
-***
 
-最近在基于Flink-CEP去做一个人群分析的功能，这个功能相对CEP本身来说场景更加具体，所以简化了CEP的不少功能，也提升了不少效率，敬请期待！  
-如果有疑问或者这篇文章有错误，欢迎到公众号下留言！
-
-![加一Blog][2]
 
 
   [1]: http://www.liaojiayi.com/assets/cep3-stock.png
-  [2]: http://www.liaojiayi.com/assets/jiayi_end_qr.png

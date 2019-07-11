@@ -3,7 +3,7 @@ title: Paper Notebook
 date: 2018-05-08 22:29:10
 tags: Data
 keywords: data
-categories: Big Data Computation Engine
+categories: Notes
 ---
 记录一下自己读的Paper。
 

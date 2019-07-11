@@ -5,13 +5,12 @@ tags:
   - Exactly-once
 articleId: flink-eo
 categories:
-  - Big Data Computation Engine
+  - Apache Flink
 keywords:
   - Flink
   - Exactly Once
   - Spark
   - 绝对一次
-description: 本文基于Flink最近提出的基于Two-Phase Commit实现Exactly Once的方案做了讲解。
 date: 2018-03-20 01:41:00
 ---
 [Official Document](https://flink.apache.org/features/2018/03/01/end-to-end-exactly-once-apache-flink.html)
@@ -54,9 +53,7 @@ Exactly-once是一个经常提到的语义，也是程序开发中，需要尽�
 
 
 
-![加一Blog][3]
 
-  [3]: http://www.liaojiayi.com/assets/jiayi_end_qr.png
 
 
 [1]: http://liaojiayi.com/assets/flink-2.png

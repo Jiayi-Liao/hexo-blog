@@ -4,11 +4,9 @@
 When it comes to the light and fast storage, we have to talk about RocksDB.
 
 
-## Abstract
+## Quick View
 
-Firstly I'll introduce the RocksDB with its features and some basic concepts, then we dive into it from core implementations that I'm interested in.
-
-Goals on performance:
+RocksDB Goals on performance:
 
 * Efficient point looups as well as range scans.
 * High random-read workloads.

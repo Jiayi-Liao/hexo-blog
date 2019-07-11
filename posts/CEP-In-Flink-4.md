@@ -6,7 +6,7 @@ tags:
   - CEP
 articleId: cep-in-flink-4
 categories:
-  - Big Data Computation Engine
+  - Apache Flink CEP
 keywords:
   - Flink
   - Flink CEP
@@ -44,9 +44,5 @@ Pattern这方面，有两个问题：
 #### EventTime处理逻辑
 CEP当然在流式处理中是要支持EventTime的，那么相对应的要支持数据的晚到现象，也就是watermark的处理逻辑。在Flink的处理逻辑中，将晚到数据明细存储在了Map<Long, List<IN\>\>的结构中，也就是说，如果watermark设置为当前时间减去5分钟，那么内存中就会存储5分钟的数据，这在我看来，也是对内存的极大损伤之一。
 
-> 在下一篇中我会写到我在基于Flink做改造，从而低成本地实现复杂事件分析的一些想法，欢迎订阅！
 
 
-![加一Blog][1]
-
-  [1]: http://www.liaojiayi.com/assets/jiayi_end_qr.png

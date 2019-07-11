@@ -3,7 +3,7 @@ title: 差点减压病...
 date: 2019-06-12 03:24:13
 tags: Dive
 keywords: Dive
-categories: 旅行
+categories: 旅行摄影
 ---
 只是想说，庆幸自己在刚潜水不久就犯了这个错误，而不是等到以后深度更大、环境更恶劣的时候出现。。。
 

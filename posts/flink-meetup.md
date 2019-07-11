@@ -6,7 +6,7 @@ tags:
   - meetup
 articleId: flink-meetup
 categories:
-  - Distributed Storage
+  - Apache Flink
 keywords:
   - Apache Flink
   - Flink meetup

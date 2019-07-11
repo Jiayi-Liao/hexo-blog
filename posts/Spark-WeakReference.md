@@ -5,7 +5,7 @@ tags:
   - Spark
 articleId: spark-weakreference
 categories:
-  - Big Data Computation Engine
+  - Apache Spark
 keywords:
   - Spark
   - ContextCleaner
@@ -82,6 +82,3 @@ referenceBuffer的作用是保证WeakReference在处理前不被GC。
 Spark将注册的Accumulator封装到CleanupTask，并基于task初始化了一个WeakReference。当Accumulator不再被引用时，task会被放入referenceQueue中，而此时cleaningThread从referenceQueue中提取即将要GC的对象做处理（见上面的清理过程代码）。
 
 
-![加一Blog][1]
-
-  [1]: http://www.liaojiayi.com/assets/jiayi_end_qr.png

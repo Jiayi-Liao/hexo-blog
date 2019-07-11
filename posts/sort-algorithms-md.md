@@ -4,7 +4,7 @@ date: 2016-09-23 09:02:23
 tags: Algorithm
 keywords: Algorithm
 description: 
-categories: Programming
+categories: 编程基础
 ---
 
 排序很基础，但是不同的排序算法所使用的思想不一样，还是很值得借鉴学习的。为了给自己巩固一下，手码一遍所有简单排序的代码。

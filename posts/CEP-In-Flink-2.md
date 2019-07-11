@@ -5,7 +5,7 @@ tags:
   - CEP
 articleId: cep-in-flink-2
 categories:
-  - Big Data Computation Engine
+  - Apache Flink CEP
 keywords:
   - Flink
   - Flink CEP
@@ -126,10 +126,6 @@ for (StateTransition<T> edge : edges) {
 
 事件顺序为e0 -> e1 -> e2 -> e3，可见e3同时作为了e1和e2的后序事件，此时通过版本号来作区分。实际情况会比这个稍微复杂一些（比如示意图中没有展现1.0），但是整体的优化思路和示意图中是类似的。
 
-***
-
-![QR][3]
 
   [1]: http://www.liaojiayi.com/assets/cep2-nfa.png
   [2]: http://www.liaojiayi.com/assets/cep2-nfa-opt.png
-  [3]: http://www.liaojiayi.com/assets/jiayi_end_qr.png

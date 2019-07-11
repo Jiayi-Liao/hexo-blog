@@ -1,16 +1,16 @@
-title: JVM调优日志
+title: Spark Streaming在轻量任务下出现的GC问题
 author: Liao Jiayi
 date: 2019-04-12 23:51:54
 tags:
   - JVM
 articleId: jvm-opt-log
 categories:
-  - Big Data Computation Engine
+  - JVM
 ---
 
-发现工作中经常少不了做JVM参数分析、GC调优等一些故障分析类的工作，并且几乎每个新类型的错误都能发现自己的知识盲区，实在是需要有个长期的日志来记录一下。
+一次Spark故障排查。
 
-## 2019-04-11(Spark Executor OOM: GC overhead limit exceeded)
+## Spark Executor OOM: GC overhead limit exceeded
 
 > 这个任务的处理过程很简单，从Kafka接收数据，经过打标签的Operator，最后写入Hive。Executor的Memory设置为2G，Spark的UnifiedMemory在1G左右，任务中用闭包传递了标签规则表，大概在350M左右（这里
 应该使用广播，但是由于我们的ETL框架中有一个广播机制，不能适用，所以直接使用了闭包传递）。

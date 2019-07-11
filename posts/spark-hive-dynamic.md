@@ -4,7 +4,7 @@ tags:
   - Spark
 articleId: spark-hive-dynamic
 categories:
-  - Big Data Computation Engine
+  - Apache Spark
 date: 2019-04-12 00:33:09
 ---
 

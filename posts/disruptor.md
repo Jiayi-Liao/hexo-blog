@@ -3,7 +3,7 @@ title: Disruptor
 date: 2019-06-16 18:38:16
 tags: Disruptor
 keywords: Disruptor
-categories: JVM
+categories: 未分类技术文章
 ---
 
 

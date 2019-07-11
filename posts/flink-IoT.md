@@ -5,7 +5,7 @@ tags:
   - Flink
 articleId: flink-IoT
 categories:
-  - Big Data Computation Engine
+  - Apache Flink
 keywords:
   - Flink
   - 物联网

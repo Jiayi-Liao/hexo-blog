@@ -3,7 +3,7 @@ title: Flink网络栈中反压机制的优化
 date: 2019-06-20 09:01:04
 tags: Flink
 keywords: Flink
-categories: Big Data Computation Engine
+categories: Apache Flink
 ---
 
 之前总是听到别人说 Flink 本身的反压机制有多么优秀，直到自己真正在应用中碰巧踩到坑，仔细研究后才发现，这个反压机制貌似并不完美。

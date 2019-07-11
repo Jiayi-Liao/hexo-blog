@@ -4,7 +4,7 @@ tags:
   - programming
 articleId: leetcode
 categories:
-  - Programming
+  - 编程基础
 date: 2016-07-22 00:33:09
 ---
 

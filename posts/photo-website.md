@@ -5,7 +5,7 @@ tags:
   - 摄影
 articleId: photo-website
 categories:
-  - 摄影
+  - 旅行摄影
 keywords:
   - 图库
   - 摄影
