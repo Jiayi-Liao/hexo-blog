@@ -25,5 +25,11 @@ When a key-value pair is written, it will go to logfile and memtable at first, t
 
 ## Compaction
 
+RocksDB provides three compaction styles:
+
+* Level Style Compaction(default): merge small files(Level n) into larger files(Level n+1). Better read amplifycation.
+* Universal Style Compaction: merge same size files. Better write amplifycation.
+* FIFO Compaction Style:
+
 
 
