@@ -57,3 +57,5 @@ date: 2016-07-22 00:33:09
 [1104. Path In Zigzag Labelled Binary Tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/): 比较有意思的一道题。
 [1093. Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/): Easy.
 [1094. Car Pooling](https://leetcode.com/problems/car-pooling/): Easy.
+[1124. Longest Well-Performing Interval](https://leetcode.com/problems/longest-well-performing-interval/): Medium，采用简单的动态规划。
+[1122. Relative Sort Array](https://leetcode.com/problems/relative-sort-array/): Easy。

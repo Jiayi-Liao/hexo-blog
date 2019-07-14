@@ -27,7 +27,26 @@ RocksDB provides three compaction styles:
 
 * Level Style Compaction(default): merge small files(Level n) into larger files(Level n+1). Better read amplifycation.
 * Universal Style Compaction: merge same size files. Better write amplifycation.
-* FIFO Compaction Style:
+* FIFO Style Compaction: this works like LRU cache. I don't think it's a qualified compaction style at all...
+
+**The compaction part is not fresh for me. We can see that it learns from Cassandra and HBase including the theory and tuning method.**
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
