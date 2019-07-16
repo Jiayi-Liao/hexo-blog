@@ -58,9 +58,7 @@ no records below eviction void-time 266233878 - threshold bucket 4678, width 113
 
 
 
-![加一Blog][2]
 
-  [2]: http://www.liaojiayi.com/assets/jiayi_end_qr.png
 
 
 

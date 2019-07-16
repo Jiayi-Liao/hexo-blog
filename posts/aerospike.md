@@ -78,6 +78,3 @@ KV数据库有很多，但大多数都是在Speed和Scale上来做取舍，根�
 
 
 
-![加一Blog][2]
-
-  [2]: http://www.liaojiayi.com/assets/jiayi_end_qr.png
