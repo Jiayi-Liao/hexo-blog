@@ -57,12 +57,19 @@ L3 = [[0 - 7], 0], [[8 - 14], 0], [[15 - 19], 0], [[20 - 30], 0]
 
 Let's say we are looking for the sstfile for number "8". From L1 we find that the [6 - 10] is what we want and its index on the next level is two. So we continue searching on L2 from index 0 to index 2 instead of doing binary search on the whole sorted set. And it's the same way from L2 down the LSM tree.  
 
-## Snapshot
 
 ## Transaction
 
-Transaction is always a topic for database.
+In RocksDB, it splits a transaction into three phases, which are Put, Prepare and Commit. However, if the db flushes operations into memtable and WAL after the transaction is committed, it means that the transaction has to be stored in disk buffer which limits the throughput and transaction size.    
 
+Instead, RocksDB has two improvements on this:
+
+* WritePrepared: Persist the transaction after Prepare phase.
+* WriteUnprepared: Presist the transaction after Put phase.
+
+> WritePrepared
+
+add a prepare_seq in every record, and after a transaction is committed, store a mapping from prepare_seq to commit_seq in CommitCache.
 
 
 
