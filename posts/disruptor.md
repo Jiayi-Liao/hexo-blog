@@ -60,12 +60,12 @@ Producer 在往队列中添加数据，而 Consumer 在队列中获取并移除�
 
 ## Optimization
 
-如果想在 volatile 的层面上进一步优化，我们先要看看 volatile 为什么会让性能产生损耗。图中显示了一个多核CPU的架构图，这里需要提到，cpu 对指令的执行会有一系列的优化来达到充分利用 cpu 缓存的目的，比如 cpu 会将执行指令 pipeline 起来然后重排顺序，让缓存命中达到最大化。根据 jvm 的 happen-before 原则，volatile 的写操作必须要在读操作之前，所以 jvm 对执行的命令已经规定了顺序，那么此时 cpu 无法再进行重排序，同时为了让其他的 cpu 读取到 volatile 的最新值，在读取时会插入一个 Load Barrier，目的是更新缓存中 volatile 变量的值，相当于每次从 RAM 中读取，没有利用任何的 cpu 缓存。  
+如果想在 volatile 的层面上进一步优化，我们先要看看 volatile 为什么会让性能产生损耗。图中显示了一个多核CPU的架构图，这里需要提到，cpu 对指令的执行会有一系列的优化来达到充分利用 cpu 缓存的目的，比如 cpu 会将执行指令 pipeline 起来然后重排顺序，让缓存命中达到最大化。根据 jvm 的 happen-before 原则，volatile 的写操作必须要在读操作之前，也就是禁止指令的重排序，所以在对 volatile 进行变更后，系统会向 cpu 插入一条 Store Barrier，强制 cpu 将 Store Buffer 中的缓存数据写入到内存中去，而在读取 volatile 时，会插入一条 Load Barrier，强制 cpu 从内存中读取最新数据。Load Barrier 的操作相对来说，会比较重一些。
 
 ![cpu architecture](http://www.liaojiayi.com/assets/cpu.png)
 
 
-从消息队列的角度来讲，如果不是非常在意每次读取都要读取 sequence 的最新值，那么完全可以不需要 Load Barrier，直接读取缓存中的旧值即可（当写入操作完成时，cpu 会将数据从 Store Buffer 更新到 Load Buffer中），这样的话，相当于每次都是从 cpu 缓存中读取数据。那么提供这种方式的代码就是 AtomicLong 中的 lazySet。
+从消息队列的角度来讲，如果不是非常在意每次读取都要读取 sequence 的最新值，那么完全可以不需要禁止指令重排序，可以暂时直接读取缓存中的旧值即可，sequence 被更新之后，会向 cpu 插入 StoreStore Barrier，等待 cpu 自动刷新 Load Buffer 中的内容，这样的话，相当于每次都是从 cpu 缓存中读取数据。那么提供这种方式的代码就是 AtomicLong 中的 lazySet。
 
 
 ## 参考
