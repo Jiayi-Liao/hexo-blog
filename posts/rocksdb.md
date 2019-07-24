@@ -69,7 +69,15 @@ Instead, RocksDB has two improvements on this:
 
 > WritePrepared
 
-add a prepare_seq in every record, and after a transaction is committed, store a mapping from prepare_seq to commit_seq in CommitCache.
+add a prepare sequence number in every record, and after a transaction is committed, store a mapping from ```prepare_seq``` to ```commit_seq``` in CommitCache. And CommitCache will evict entries based on the max size you set. a ```max_evict_seq``` is used to monitor the evict boundaries.  
+
+In a query you can get the prepare sequence number on records and if :
+
+* ```prepare_seq``` > ```max_evict_seq```  and not in CommitCache: it means the record is persisted but not committed yet.
+* ```prepare_seq``` in CommitCache or ```prepare_seq``` < ```max_evict_seq```: the record is committed.
+
+However, if a transaction lasts too long so that the ```max_evict_seq``` advances the ```prepare_seq``` in the transaction, the ```prepare_seq``` will be put into a ```delayed_prepared_``` set and RocksDB will check this set to know whether the querying record is really committed or not.
+
 
 
 
