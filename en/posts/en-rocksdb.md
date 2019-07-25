@@ -8,7 +8,7 @@ When it comes to the light and fast storage, we have to talk about RocksDB.
 
 RocksDB's goals on performance:
 
-* Efficient point looups as well as range scans.
+* Efficient point lookups as well as range scans.
 * High random-read workloads.
 * High update workloads.
 * Easy to tune the tradeoff according to the hardware.
@@ -87,7 +87,4 @@ Honestly, It's very hard to understand the machanism just according to wiki docu
 
 
 I believe that not too many developers are willing to count on the transactions in RocksDB. Firstly the algorithm is a little hard to understand and we may need to spend a lot time on figuring this out if something goes wrong in production. Moreover, RocksDB still can't handle edge situations like long transaction and history snapshot.
-
-
-
 
