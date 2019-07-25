@@ -6,7 +6,7 @@ When it comes to the light and fast storage, we have to talk about RocksDB.
 
 ## Quick View
 
-RocksDB Goals on performance:
+RocksDB's goals on performance:
 
 * Efficient point looups as well as range scans.
 * High random-read workloads.
@@ -79,6 +79,14 @@ In a query you can get the prepare sequence number on records and if :
 However, if a transaction lasts too long so that the ```max_evict_seq``` advances the ```prepare_seq``` in the transaction, the ```prepare_seq``` will be put into a ```delayed_prepared_``` set and RocksDB will check this set to know whether the querying record is really committed or not.
 
 
+
+
+> WriteUnprepared
+
+Honestly, It's very hard to understand the machanism just according to wiki document. And this is not on production yet, so to be continued...
+
+
+I believe that not too many developers are willing to count on the transactions in RocksDB. Firstly the algorithm is a little hard to understand and we may need to spend a lot time on figuring this out if something goes wrong in production. Moreover, RocksDB still can't handle edge situations like long transaction and history snapshot.
 
 
 
