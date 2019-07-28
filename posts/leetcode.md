@@ -59,3 +59,6 @@ date: 2016-07-22 00:33:09
 [1094. Car Pooling](https://leetcode.com/problems/car-pooling/): Easy.
 [1124. Longest Well-Performing Interval](https://leetcode.com/problems/longest-well-performing-interval/): Medium，采用简单的动态规划。
 [1122. Relative Sort Array](https://leetcode.com/problems/relative-sort-array/): Easy。
+[1137. N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/): Easy。
+[1138. Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/): Easy。
+[1139. Largest 1-Bordered Square](https://leetcode.com/problems/largest-1-bordered-square/): Medium，很繁琐的一系列操作。
