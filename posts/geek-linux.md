@@ -179,7 +179,12 @@ Buffer是对磁盘数据的缓存，Cache是对文件数据的缓存，它们既
 * 写：应用程序可以在真正写入磁盘前就返回做其他的工作，剩下工作由cache和buffer来完成。
 * 读：频繁读取的磁盘数据，可以加速它的读取。
 
+使用工具：
 
+* cachestat
+* cachetop
+* memleak
+* valgrind
 
 
 
