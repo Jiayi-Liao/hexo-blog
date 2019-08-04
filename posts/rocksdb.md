@@ -28,7 +28,7 @@ RocksDB 在性能上的目标：
 
 RocksDB 提供了三种 Compaction：
 
-* Level Style Compaction(default): 将不同的 sstfile 分级，越老的文件层级越高，定期将小文件向上一个层级的文件合并。这样，会有更好的查询性能，减少了读放大。
+* Level Style Compaction(default): 将不同的 sstfile 分级，越老的文件层级越高，定期将小文件向上一个层级的文件合并。这样，会有更好的查询性能，减少了读放大，提供了多线程的实现。
 * Universal Style Compaction: 合并同一大小的文件，减少了写放大。
 * FIFO Style Compaction: 这种 Compaction 实现的比较粗糙，会出现 evict 数据的情况。
 
@@ -86,4 +86,15 @@ RocksDB 在每条记录上加了一个 ```prepare_seq```，在事务被提交后
 
 这一部分，单纯的从文档上看，并没有很好的理解其中的原理，并且这个功能还没有在生产上使用...
 
-在阅读完 RocksDB 相关的文档之后，我相信没有太多的开发者愿意依赖 RocksDB 的事务，首先这个事务的算法机制本身有些复杂，难以理解，一旦出现问题，线上排查问题的过程必定会相当复杂；其次 RocksDB 对于这种事务机制，并不能接受一些极端情况，如长事务和阅读历史 snapshot 等。虽然它对 Put -> Prepare -> Commit 的流程做了很大的优化，提升了吞吐，但是这样的确对使用 RocksDB 的业务，有很大的限制。
+在阅读完 RocksDB 相关的文档之后，我相信没有太多的开发者愿意依赖 RocksDB 的事务，首先这个事务的算法机制本身有些复杂，难以理解，一旦出现问题，线上排查问题的过程必定会相当复杂；其次 RocksDB 对于这种事务机制，并不能接受一些极端情况，如长事务和阅读过于久远的历史 snapshot 等。虽然它对 Put -> Prepare -> Commit 的流程做了很大的优化，提升了吞吐，但是这样的确对使用 RocksDB 的业务，有很大的限制。
+
+
+## Summary
+
+这里是我 Database 系列的第2篇笔记，写 RocksDB 的原因是不少企业已经有了很多成功的案例，并且在我司也曾经有过对 RocksDB 的选型考虑（不过还是因为吞吐并没有我们想象的那么好）。文中的信息大部分是通过 [RocksDB Wiki](https://github.com/facebook/rocksdb/wiki/Rocksdb-Architecture-Guide) 得到，从架构设计上并没有太多惊艳的地方，事务处理也有些不尽人意。但是在使用上看，RocksDB 确实足够轻量，不需要额外的部署，一个 jar 包就可以拥有一个功能完备的数据库，api 的使用体验也不错，并且能灵活对接 HDFS。  
+
+关于 RocksDB 写放大读放大的问题，学术界也提出过相关的理论，我也简单研读过，的确是一个不一样的视角，但是不知是否有成功的实践呢？
+
+* [WiscKey: Separating Keys from Values
+in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf)
+* [HashKV: Enabling Efficient Updates in KV Storage via Hashing](https://www.usenix.org/system/files/conference/atc18/atc18-chan.pdf)
