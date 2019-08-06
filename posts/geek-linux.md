@@ -88,6 +88,8 @@ CPU 使用寄存器来暂存指令、数据和地址，使用计数器来记录�
 
 * perf: [Perf In Netflix](https://www.youtube.com/watch?time_continue=1286&v=UVM3WX8Lq2k)，查看CPU状态的工具，功能非常强大。
 * pstree: 查看进程之间的父子关系。
+* strace: 查看系统调用
+* lsof: list open files
 
 常用的 top 命令：
 
@@ -193,5 +195,20 @@ Linux 为每个文件分配：
 * 索引节点(inode): 文件的唯一标识。记录文件 metadata。持久化到磁盘上。
 * 目录项(dentry): 目录结构的内部缓存。
 
+磁盘的最小读取单位是扇区，为了提高效率，将连续的扇区组成逻辑块，每次以逻辑块为最小单元来操作数据。超级块，用来记录文件系统整体状态，如 inode 和逻辑块的使用情况。
+
+[linux io]()
+
+### 磁盘
+
+* HDD: 机械磁盘，移动读写磁头，定位磁道。最小单位扇区 512B。
+* SSD: 固态磁盘，不需要磁道寻址。随机读写产生大量的垃圾回收。最小单位扇区 4KB。组成逻辑块后可以预读。
+
+不同的磁盘组合方式会有不同的存储架构设计。如
+
+* RAID: 多块磁盘组合成一个逻辑磁盘，构成冗余独立磁盘阵列。Redundant Array of Independent Disks。
+* NFS: 组成网络磁盘存储集群。
+
+[iostat指标解读]()
 
 
