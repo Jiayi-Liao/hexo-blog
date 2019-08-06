@@ -62,3 +62,5 @@ date: 2016-07-22 00:33:09
 [1137. N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/): Easy。
 [1138. Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/): Easy。
 [1139. Largest 1-Bordered Square](https://leetcode.com/problems/largest-1-bordered-square/): Medium，很繁琐的一系列操作。
+[1144. Decrease Elements To Make Array Zigzag](https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/): Medium。
+[1145. Binary Tree Coloring Game](https://leetcode.com/problems/binary-tree-coloring-game/): Medium，一次过。

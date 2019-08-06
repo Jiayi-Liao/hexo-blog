@@ -50,7 +50,7 @@ of CPUs in a system, so a load average of 1 means a single CPU system is loaded 
 
 ## CPU上下文切换
 
-经常听到人提起上下文切换会影响性能这句话...  
+
 CPU 使用寄存器来暂存指令、数据和地址，使用计数器来记录指令的地址，这些可以标识 CPU 当前状态和环境的因素构成了 CPU 的上下文。
 
 上下文切换本质上是 CPU 的任务切换，这种任务切换分为三种：
@@ -185,6 +185,13 @@ Buffer是对磁盘数据的缓存，Cache是对文件数据的缓存，它们既
 * cachetop
 * memleak
 * valgrind
+
+## I/O 性能篇
+
+Linux 为每个文件分配：
+
+* 索引节点(inode): 文件的唯一标识。记录文件 metadata。持久化到磁盘上。
+* 目录项(dentry): 目录结构的内部缓存。
 
 
 
