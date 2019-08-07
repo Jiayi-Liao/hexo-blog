@@ -64,3 +64,13 @@ date: 2016-07-22 00:33:09
 [1139. Largest 1-Bordered Square](https://leetcode.com/problems/largest-1-bordered-square/): Medium，很繁琐的一系列操作。
 [1144. Decrease Elements To Make Array Zigzag](https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/): Medium。
 [1145. Binary Tree Coloring Game](https://leetcode.com/problems/binary-tree-coloring-game/): Medium，一次过。
+[491. Increasing Subsequences](https://leetcode.com/problems/increasing-subsequences/): Medium.
+[11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/): Easy.
+[136. Single Number](https://leetcode.com/problems/single-number/): Too easy.
+[796. Rotate String](https://leetcode.com/problems/rotate-string/): Easy
+[50. Pow(x, n)](https://leetcode.com/problems/powx-n/): Easy
+[337. House Robber III](https://leetcode.com/problems/house-robber-iii/): Easy.
+[825. Friends Of Appropriate Ages](https://leetcode.com/problems/friends-of-appropriate-ages/): Easy.
+[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/): Easy.
+[933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/): Easy.
+[1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/): Easy.
