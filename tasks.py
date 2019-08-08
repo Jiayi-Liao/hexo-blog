@@ -7,12 +7,12 @@ from password import *
 @task
 def blogpic(c, src):
     conn = Connection(host='101.200.171.13', user='root',
-                      connect_kwargs={"password": password})
-    src = src.split("/")[-1]
-    conn.put("/Users/liaojiayi/Desktop/" + src,
+                      connect_kwargs={"password": password})    
+    file = src.split("/")[-1]
+    conn.put(src,
              "/server/hexo/themes/next/source/assets/")
     conn.run("cp /server/hexo/themes/next/source/assets/" +
-             src + " /var/www/hexo/assets/")
+             file + " /var/www/hexo/assets/")
 
 
 @task

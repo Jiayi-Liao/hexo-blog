@@ -74,3 +74,8 @@ date: 2016-07-22 00:33:09
 [701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/): Easy.
 [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/): Easy.
 [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/): Easy.
+[844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/): Easy.
+[451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/): Easy.
+[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/): Medium.
+[869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/): Medium.
+[870. Advantage Shuffle](870. Advantage Shuffle): Medium.
