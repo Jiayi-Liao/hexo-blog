@@ -79,3 +79,16 @@ date: 2016-07-22 00:33:09
 [43. Multiply Strings](https://leetcode.com/problems/multiply-strings/): Medium.
 [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/): Medium.
 [870. Advantage Shuffle](870. Advantage Shuffle): Medium.
+[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)： Easy.
+[122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/): Easy.
+[503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)： Medium.
+[168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/): Easy.
+[830. Positions of Large Groups](https://leetcode.com/problems/positions-of-large-groups/): Easy.
+[101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/): Easy.
+[78. Subsets](https://leetcode.com/problems/subsets/): Easy.
+[207. Course Schedule](https://leetcode.com/problems/course-schedule/): Medium，差点使用连通图，结果不是，用 stack 实现dfs。
+[257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/): Easy.
+[16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/): Easy.
+[129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/): Easy.
+[238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/): Easy.
+[686. Repeated String Match](https://leetcode.com/problems/repeated-string-match/): Easy.
