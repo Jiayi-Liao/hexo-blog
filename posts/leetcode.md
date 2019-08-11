@@ -92,3 +92,7 @@ date: 2016-07-22 00:33:09
 [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/): Easy.
 [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/): Easy.
 [686. Repeated String Match](https://leetcode.com/problems/repeated-string-match/): Easy.
+[888. Fair Candy Swap](https://leetcode.com/problems/fair-candy-swap/): Easy.
+[1154. Day of the Year](https://leetcode.com/problems/day-of-the-year/): Easy.
+[1155. Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/): Medium，做个缓存.
+[1156. Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/): Medium.
