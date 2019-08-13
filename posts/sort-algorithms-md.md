@@ -49,7 +49,21 @@ def quickSort(arr: Array[Int], begin: Int, end: Int): Unit = {
 
 ## 插入排序：
 
-新建一个数组，逐一插入。。。逻辑太简单了，不写...
+```
+def insertSort(arr: Array[Int]): Unit = {
+	arr.indices.foreach(i => {
+		val v = arr(i)
+		(i to 1 by -1).foreach(j => {
+			if (arr(j-1) > arr(j)) {
+				val temp = arr(j)
+				arr.update(j, arr(j-1))
+				arr.update(j-1, temp)
+			}
+		})
+	})
+}
+```
+
 
 ## 冒泡排序
 
