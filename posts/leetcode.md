@@ -66,6 +66,7 @@ date: 2016-07-22 00:33:09
 [1145. Binary Tree Coloring Game](https://leetcode.com/problems/binary-tree-coloring-game/): Medium，一次过。
 [491. Increasing Subsequences](https://leetcode.com/problems/increasing-subsequences/): Medium.
 [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/): Easy.
+[15. 3Sum](https://leetcode.com/problems/3sum/): Easy.
 [136. Single Number](https://leetcode.com/problems/single-number/): Too easy.
 [796. Rotate String](https://leetcode.com/problems/rotate-string/): Easy
 [50. Pow(x, n)](https://leetcode.com/problems/powx-n/): Easy
@@ -96,3 +97,26 @@ date: 2016-07-22 00:33:09
 [1154. Day of the Year](https://leetcode.com/problems/day-of-the-year/): Easy.
 [1155. Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/): Medium，做个缓存.
 [1156. Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/): Medium.
+[1002. Find Common Characters](https://leetcode.com/problems/find-common-characters/): Easy.
+[576. Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/): Easy.
+[169. Majority Element](https://leetcode.com/problems/majority-element/): Easy.
+[229. Majority Element II](https://leetcode.com/problems/majority-element-ii/): Easy.
+[1080. Insufficient Nodes in Root to Leaf Paths](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/): Medium.
+[1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/): Medium.
+[976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/): Medium，要先做排序，还没想到。
+[693. Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/): Easy.
+[779. K-th Symbol in Grammar](https://leetcode.com/problems/k-th-symbol-in-grammar/): Medium，开始的想法想错了。
+[905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/): Easy.
+[482. License Key Formatting](https://leetcode.com/problems/license-key-formatting/): Easy.
+[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/): Not too medium.
+[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/submissions/): Easy.
+[17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/): Easy.
+[19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/): Easy.
+[22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/): Medium.
+[98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/): Medium.
+[152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/): Easy.
+[31. Next Permutation](https://leetcode.com/problems/next-permutation/): Medium.
+[322. Coin Change](https://leetcode.com/problems/coin-change/): Medium.
+[142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/): Medium.
+[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/): Easy.
+[102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/): Easy.
