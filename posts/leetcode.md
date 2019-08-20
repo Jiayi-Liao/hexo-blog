@@ -120,3 +120,6 @@ date: 2016-07-22 00:33:09
 [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/): Medium.
 [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/): Easy.
 [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/): Easy.
+[34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/): Easy.
+[139. Word Break](https://leetcode.com/problems/word-break/): Medium.
+[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/): Medium. 这里实现的 Trie Tree 性能太差，如果以单个字母来实现，性能简直是差的可以。

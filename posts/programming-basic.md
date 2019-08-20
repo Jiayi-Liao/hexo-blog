@@ -11,6 +11,14 @@ categories: 编程基础
 
 ## JVM
 
+### 多线程
+
+* volatile
+* mmap
+* wait / notify: 需要在同步状态 synchronized 中使用。
+* CAS(Compare And Swap): 基于乐观锁机制。
+
+
 ### LOCK
 
 * Fat Lock: 多线程访问资源，资源被竞争，性能消耗最大。
@@ -70,6 +78,22 @@ GC 种类：
 ## 分布式计算
 
 * 数据倾斜问题
+	* 
+
+### Apache Spark
+
+* Spark Streaming backpressure: 基于 PID controller，根据速率线性稳步控制消费的条数。 
+
+### Apache Flink
+
+* Blink 优化: [README.md](https://github.com/apache/flink/blob/blink/README.md)
+* FLIP-6: 增加 ResourceManager 和 Dispatcher，相当于从 YARN 等资源调度系统中获取资源之后，还可以对资源进行更细粒度的分配，可以更加灵活。可以灵活在不同的 job 中配置资源上的优先级。
+* Flink 支持 incremental checkpoint，本身是使用了 RocksDB 的 LSM 特性，所谓的 incremental，指的是不用完整地复制前一个 checkpoint 产生的文件，只需要负责增量的部分数据落地即可，然后通过 compaction 来删除历史文件。
+* Flink Exactly-Once vs At-Least-Once:  设置 CheckpointMode 为 Exactly-Once，CheckpointBarrierHandler 会选用 BarrierBuffer，此时 task 必须要接收到所有的 input 的 barrier 才能开始处理数据并发送 Barrier 给下游，在接收所有 barrier 之前，会将所有的数据缓存起来，放入 Buffer 中，如果缓存数据超过设置的大小，那么 checkpoint 宣告失败。 设置 CheckpointMode 为 At-Least-Once，CheckpointBarrierHandler 会选用 BarrierTracker，不会缓存数据，不需要保证 Barrier 的 Alignment。
+* Flink Checkpoint: (1) operatorChain.prepareSnapshotPreBarrier (2) operatorChain.broadcastCheckpointBarrier (3) checkpoint'
+* Checkpoint 有 synchronous 和 asynchronous 两种模式，这两种模式指的是 一个 task 中的 operators 里的 snapshot 是同时进行还是依次进行。
+
+
 
 
 ## 文件格式
@@ -80,9 +104,6 @@ GC 种类：
 
 
 * RCFile: 有些类似 Parquet，但是不能像 Parquet 一样支持结构化的数据。
-
-
-
 
 
 
