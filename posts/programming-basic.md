@@ -13,6 +13,15 @@ categories: 编程基础
 
 ### 多线程
 
+* ThreadPoolExecutor 的实现，几个关键点：
+	* 用 HashSet<Worker> 来放置 Worker，这样提交新任务的时候可以扩容。
+	* 使用 java.util.concurrent.BlockingQueue 来存储任务。
+	* 在 Worker 中从 BlockingQueue 中无线循环拉去任务。
+	* BlockingQueue 有一个 size limit，会有 DiscardPolicy。
+
+* ReentrantLock: 可重入且独占式的锁。有些类似 synchronized 但是有更多的功能。比如可以 tryLock(timeout) 这样，还可以检测锁是不是属于当前线程。可以给当前线程的 lock / unlock 计数。它的内部有公平锁和非公平锁两种，公平锁就是获取锁之前在等待队列中找有没有等待时间更长的线程，如果有就不分配。非公平锁就是直接抢占，不判断等待队列。正常情况下 tryLock(timeout) 会将线程放入等待队列中。
+
+* HashMap / HashTable / ConcurrentHashMap: 
 * volatile
 * mmap
 * wait / notify: 需要在同步状态 synchronized 中使用。

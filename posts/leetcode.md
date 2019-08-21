@@ -123,3 +123,6 @@ date: 2016-07-22 00:33:09
 [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/): Easy.
 [139. Word Break](https://leetcode.com/problems/word-break/): Medium.
 [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/): Medium. 这里实现的 Trie Tree 性能太差，如果以单个字母来实现，性能简直是差的可以。
+[114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/): Medium.
+[96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/): Medium.
+[94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/): Easy.
