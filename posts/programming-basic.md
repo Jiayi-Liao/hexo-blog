@@ -21,7 +21,16 @@ categories: 编程基础
 
 * ReentrantLock: 可重入且独占式的锁。有些类似 synchronized 但是有更多的功能。比如可以 tryLock(timeout) 这样，还可以检测锁是不是属于当前线程。可以给当前线程的 lock / unlock 计数。它的内部有公平锁和非公平锁两种，公平锁就是获取锁之前在等待队列中找有没有等待时间更长的线程，如果有就不分配。非公平锁就是直接抢占，不判断等待队列。正常情况下 tryLock(timeout) 会将线程放入等待队列中。
 
-* HashMap / HashTable / ConcurrentHashMap: 
+* CyclicBarrier: 可以被多个线程使用的 barrier。构造方法有下面这两个，第 2 个构造方法的 Runnable 是所有线程释放锁之后触发的。 CyclicBarrier 的主要场景可以用来多线程计算数据，最后合并计算结果的场景。
+
+```
+public CyclicBarrier(int parties)
+public CyclicBarrier(int parties, Runnable barrierAction)
+```
+
+* 
+
+* HashMap / HashTable / ConcurrentHashMap: HashTable 线程安全，使用时锁住全表。 HashMap 数组链表，线程不安全。ConcurrentHashMap 线程安全，采取的是分段的数组+链表，把 Map 分为若干个 Segment，以 Segment 的粒度来加锁，value 使用 volatile，不用加锁。
 * volatile
 * mmap
 * wait / notify: 需要在同步状态 synchronized 中使用。
@@ -88,6 +97,18 @@ GC 种类：
 
 * 数据倾斜问题
 	* 
+
+### Apache Druid
+
+![druid](http://www.liaojiayi.com/assets/druid.jpg)
+
+### Impala
+
+MPP 架构，通过 exchange 节点实现 shuffle。这种节点其实有点像是 spark external shuffle service ？ 那么其实 MPP 和 map-reduce 模型本身并没有孰优孰劣，MPP 本身没有 shuffle 的一个操作，所以更加快速，更加适合简单的查询。
+
+### Presto
+
+
 
 ### Apache Spark
 
