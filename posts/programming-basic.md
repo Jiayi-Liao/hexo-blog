@@ -28,7 +28,7 @@ public CyclicBarrier(int parties)
 public CyclicBarrier(int parties, Runnable barrierAction)
 ```
 
-* 
+* CountDownLatch: 有点像火箭发射的倒计时。比如有10个线程要做准备工作，那么 CountDownLatch 从 9 到 0 之后，主程序才会继续运行。
 
 * HashMap / HashTable / ConcurrentHashMap: HashTable 线程安全，使用时锁住全表。 HashMap 数组链表，线程不安全。ConcurrentHashMap 线程安全，采取的是分段的数组+链表，把 Map 分为若干个 Segment，以 Segment 的粒度来加锁，value 使用 volatile，不用加锁。
 * volatile
@@ -108,7 +108,7 @@ MPP 架构，通过 exchange 节点实现 shuffle。这种节点其实有点像�
 
 ### Presto
 
-
+和 Impala 本身类似。
 
 ### Apache Spark
 
@@ -118,11 +118,11 @@ MPP 架构，通过 exchange 节点实现 shuffle。这种节点其实有点像�
 
 * Blink 优化: [README.md](https://github.com/apache/flink/blob/blink/README.md)
 * FLIP-6: 增加 ResourceManager 和 Dispatcher，相当于从 YARN 等资源调度系统中获取资源之后，还可以对资源进行更细粒度的分配，可以更加灵活。可以灵活在不同的 job 中配置资源上的优先级。
-* Flink 支持 incremental checkpoint，本身是使用了 RocksDB 的 LSM 特性，所谓的 incremental，指的是不用完整地复制前一个 checkpoint 产生的文件，只需要负责增量的部分数据落地即可，然后通过 compaction 来删除历史文件。
+* Flink 支持 incremental checkpoint，本身是使用了 RocksDB 的 LSM 特性，所谓的 incremental，指的是不用完整地复制前一个 checkpoint 产生的文件，只需要负责增量的部分数据落地即可，不是通过 compaction 来删除文件。
 * Flink Exactly-Once vs At-Least-Once:  设置 CheckpointMode 为 Exactly-Once，CheckpointBarrierHandler 会选用 BarrierBuffer，此时 task 必须要接收到所有的 input 的 barrier 才能开始处理数据并发送 Barrier 给下游，在接收所有 barrier 之前，会将所有的数据缓存起来，放入 Buffer 中，如果缓存数据超过设置的大小，那么 checkpoint 宣告失败。 设置 CheckpointMode 为 At-Least-Once，CheckpointBarrierHandler 会选用 BarrierTracker，不会缓存数据，不需要保证 Barrier 的 Alignment。
-* Flink Checkpoint: (1) operatorChain.prepareSnapshotPreBarrier (2) operatorChain.broadcastCheckpointBarrier (3) checkpoint'
-* Checkpoint 有 synchronous 和 asynchronous 两种模式，这两种模式指的是 一个 task 中的 operators 里的 snapshot 是同时进行还是依次进行。
-
+* Flink Checkpoint: (1) operatorChain.prepareSnapshotPreBarrier (2) operatorChain.broadcastCheckpointBarrier (3) checkpoint
+* Checkpoint 有 synchronous 和 asynchronous 两种模式，在 HeapStateBackend 中，这两种模式不太一样。但这两种模式都是会创建一个 CopyOnWriteStatTable，相当于要复制 一遍 StatTable，只不过 sync 模式是复制了一个 snapshot 之后，直接基于 snapshot 去持久化状态，而 async 模式，是将 FutureTask 传递下去，放到后面一起执行。
+* Flink 网络栈传输的流程。
 
 
 

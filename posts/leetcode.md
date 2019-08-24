@@ -15,8 +15,8 @@ date: 2016-07-22 00:33:09
 [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/): 难度简单，链表。
 [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/):难度简单，需要引入一个前置节点。
 [559. Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/): 难度简单，动态规划。
-[198. House Robber]: 难度简单，动态规划，利用循环将最优解传递。
-[213. House Robber ii]: 难度简单，动态规划，利用循环将最优解传递。
+[198. House Robber](https://leetcode.com/problems/house-robber/): 难度简单，动态规划，利用循环将最优解传递。
+[213. House Robber ii](https://leetcode.com/problems/house-robber-ii/): 难度简单，动态规划，利用循环将最优解传递。
 [509. Fibonacci Number]: 难度简单，斐波那契数列。
 [307. Range Sum Query - Mutable]：Easy。
 [1025. Divisor Game]: 难度中等，动态规划求解。
@@ -126,3 +126,6 @@ date: 2016-07-22 00:33:09
 [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/): Medium.
 [96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/): Medium.
 [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/): Easy.
+[1162. As Far from Land as Possible](https://leetcode.com/problems/as-far-from-land-as-possible/): Easy. Use dp.
+[1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/): Easy.
+[1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/): Easy.
