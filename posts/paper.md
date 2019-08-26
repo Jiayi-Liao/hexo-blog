@@ -32,3 +32,10 @@ in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/
 ***
 
 * [SOS: Optimizing Shuffle I/O](https://vimeo.com/274418771): 基于大规模shuffle做了一些优化，主要是针对map多，数据小而碎，在 map 和 reduce 的中间加入了一些组件和 failover 的一些操作。
+
+***
+
+* [基于融合计算的在线学习](https://47.96.246.115/community/activities/698/review/839): 早就不是基于规则的学习了，有很多在线机器学习的需求。希望将计算和机器学习一体化。现有系统下，阿里使用 Blink + Tensorflow，中间使用 Queue 来实现连接，这样系统割裂，中间的成本高昂。把训练和样本放在一起来做。 Straming / Training / Serving。
+
+![ray](http://www.liaojiayi.com/assets/ray.jpg)
+![ray](http://www.liaojiayi.com/assets/ray-target.jpg)
