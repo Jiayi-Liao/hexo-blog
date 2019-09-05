@@ -129,3 +129,4 @@ date: 2016-07-22 00:33:09
 [1162. As Far from Land as Possible](https://leetcode.com/problems/as-far-from-land-as-possible/): Easy. Use dp.
 [1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/): Easy.
 [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/): Easy.
+[1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/): Easy.
