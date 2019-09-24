@@ -2,7 +2,7 @@
 title: Rpc In Flink
 date: 2019-09-09 16:23:13
 keywords: Flink
-categories: Apache Flink CEP
+categories: Apache Flink
 ---
 
 Apache Flink 在 Dispatcher、JobMaster、ResourceManager、TaskExecutor 几大组件之间采用 akka 进行通信。

@@ -1,19 +1,76 @@
-title: Bitmap - 性能和原理研究
+title: Table In Flink
 author: Liao Jiayi
 tags:
-  - Bitmap
-articleId: bitmap
+  - Flink
+articleId: flink-table
 categories:
-  - 未分类技术文章
-keywords:
-  - bitmap
-  - bitmap原理
-  - RoaringBitmap
-description: 本文基于论文描述了多种bitmap的行程原理，以及现在应用最广泛的RoaringBitmap的源码解析和性能优化
+  - Apache Flink
 date: 2018-07-06 16:46:00
 ---
 
+之前没有使用过 Table 相关的 API，在这稍微做下记录。
 
-* https://ci.apache.org/projects/flink/flink-docs-release-1.9/dev/table/common.html
-* 
+## Structure of Program
+
+一个使用 Table API 的程序结构大致如下所示：
+
+```
+// create a TableEnvironment for specific planner batch or streaming
+TableEnvironment tableEnv = ...; // see "Create a TableEnvironment" section
+
+// register a Table
+tableEnv.registerTable("table1", ...)            // or
+tableEnv.registerTableSource("table2", ...);     // or
+// register an output Table
+tableEnv.registerTableSink("outputTable", ...);
+
+// create a Table from a Table API query
+Table tapiResult = tableEnv.scan("table1").select(...);
+// create a Table from a SQL query
+Table sqlResult  = tableEnv.sqlQuery("SELECT ... FROM table2 ... ");
+
+// emit a Table API result Table to a TableSink, same for SQL result
+tapiResult.insertInto("outputTable");
+
+// execute
+tableEnv.execute("java_job");
+```
+
+TableEnvironment 分为 Batch 和 Stream 两种，分别在 bridge 模块中可以实现与 DataSet / DataStream 之间的转换。  
+
+
+注册 Table 的方式有三种：
+
+* registerTable // register with Table
+* registerTableSource // register with TableSource
+* registerTableSink // register with TableSink
+
+注册后便会在 Catalog 下注册对应的表，目前支持 Hive 和 InMemory 两种模式。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
