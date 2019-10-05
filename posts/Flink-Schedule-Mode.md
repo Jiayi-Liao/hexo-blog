@@ -45,7 +45,7 @@ private CompletableFuture<Void> scheduleLazy(SlotProvider slotProvider) {
 }
 ```
 
-**ExecutionJobVertex**代表某个operation，如map。在这里根据ExecutionGraph中ExecutionJobVertex的顺序来依次初始化。当使用到当前task时，再去调度。
+**ExecutionJobVertex**代表某个operation，如map。在这里只调度 Source 相关的 ExecutionJobVertex。
 
 
 **EAGER**的方式：
