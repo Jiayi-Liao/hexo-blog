@@ -14,8 +14,15 @@ date: 2019-12-02 16:46:00
 
 # 概览
 
+`DefaultOperatorStateBackend` 状态主要分为两类：
 
-# 状态写入
+* PartitionableListState
+* BackendWritableBroadcastState
+
+# 状态读写
+
+
+# 状态快照
 
 
 # 状态恢复
