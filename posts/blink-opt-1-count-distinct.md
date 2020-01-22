@@ -1,5 +1,5 @@
 ---
-title: Blink Optimization(1) - Count Distinct In Streaming
+title: Blink - Count Distinct In Streaming
 date: 2019-04-29 23:25:11
 tags: 
   - Blink
@@ -13,8 +13,6 @@ keywords:
 description:
 categories: Apache Flink
 ---
-
-Blink作为Flink的分支已经开源一段时间了，在读了一些源码之后，决定写一个Blink Optimization的系列来分享一些有意思的改进。这次选用Count Distinct是因为它一定程度上改善了数据倾斜造成的影响，这个improvement对于很多人应该都是还比较重要的。这个优化方式也是我们常用的方式，但是Blink以更加抽象形式实现了，理论上对于Streaming和Batch都是适用的，但是目前在Batch中还没有使用这个优化。
 
 ## Data Skew（数据倾斜）
 
