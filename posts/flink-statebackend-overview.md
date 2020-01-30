@@ -44,19 +44,21 @@ MemoryStateBackend | DefaultOperatorStateBackend | HeapKeyedStateBackend
 FsStateBackend | DefaultOperatorStateBackend | HeapKeyedStateBackend 
 RocksDBStateBackend | DefaultOperatorStateBackend | RocksDBKeyedStateBackend
 
-看到这里可能要问，MemoryStateBackend 和 FsStateBackend 有什么区别？这个具体后面文章会讲，因为 KeyedStateBackend 本身只定义 State 的存储方式和序列化方式，至于状态存储到哪里，如何去存储，还是由 StateBackend 来控制的。
+看到这里可能要问，MemoryStateBackend 和 FsStateBackend 有什么区别？这个具体后面文章会讲，因为 KeyedStateBackend 本身只定义 State 的存储方式和序列化方式，至于状态存储到哪里，如何去存储，Checkpoint 怎么操作，还是由 StateBackend 来控制的。所以 MemoryStateBackend 和 FsStateBackend 都是将状态放入内存中但是在 Checkpoint / Savepoint 的方式会有所不同。
 
-在这里简单描述一下三种 StateBackend 的用途，和官方描述的一致，有兴趣可以看 [Blog](https://www.ververica.com/blog/stateful-stream-processing-apache-flink-state-backends)。
+在这里简单描述一下三种 StateBackend 的用途，和官方博客描述的一致，有兴趣可以看 [Ververica Blog](https://www.ververica.com/blog/stateful-stream-processing-apache-flink-state-backends)。
 
 > MemoryStateBackend  
 
-Meo
+MemoryStateBackend 主要用来做本地调试，可以用于存储小状态，如 KB 级别的状态数据。
 
 > FsStateBackend
 
-sdfs
+FsStateBackend 可以用于生产环境，具有 HA 特性。
 
 > RocksDBStateBackend
+
+RocksDBStateBackend 适用于超大型 State，也是诸多应用场景下最主流的选择，具有 HA 特性，支持增量 Checkpoint。
 
 
 
