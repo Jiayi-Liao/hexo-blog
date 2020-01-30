@@ -130,3 +130,6 @@ date: 2016-07-22 00:33:09
 [1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/): Easy.
 [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/): Easy.
 [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/): Easy.
+[1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/): Easy.
+[1333. Filter Restaurants by Vegan-Friendly, Price and Distance](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/): Easy.
+[1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/): Floyd-Warshall Algorithm to find shortest path between cities.
