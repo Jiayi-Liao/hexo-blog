@@ -1,4 +1,15 @@
-# Flink StateBackend (1) - Overview
+title: Flink StateBackend (1) - Overview
+author: Liao Jiayi
+tags:
+  - Flink
+  - StateBackend
+articleId: flink-statebackend-overview
+categories: Apache Flink StateBackend
+keywords:
+  - Flink
+  - StateBackend
+date: 2020-01-31 07:08:40
+---
 
 > 如果要说 Flink 作为一个流式计算引擎，有什么很 nb 的地方，我觉得 State / StateBackend 算是一个。
 

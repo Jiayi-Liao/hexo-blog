@@ -133,3 +133,6 @@ date: 2016-07-22 00:33:09
 [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/): Easy.
 [1333. Filter Restaurants by Vegan-Friendly, Price and Distance](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/): Easy.
 [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/): Floyd-Warshall Algorithm to find shortest path between cities.
+[1341. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/): Easy.
+[1342. Reduce Array Size to The Half](https://leetcode.com/problems/reduce-array-size-to-the-half/): Easy.
+[1343. Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/): Easy.
