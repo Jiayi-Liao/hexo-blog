@@ -88,6 +88,3 @@ StateTable.java
 
 
 
-![加一Blog][1]
-
-  [1]: http://www.liaojiayi.com/assets/jiayi_end_qr.png

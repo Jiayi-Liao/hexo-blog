@@ -51,10 +51,6 @@ Flink 的 Checkpoint 和 Savepoint 的界限一直没有清晰地划开，所以
 
 
 
-***
-
-**工作实在太忙，博客写的太糙，如果有不明白的地方可以邮件咨询。**   
-**Email: buptliaojiayi@gmail.com**
 
 
 

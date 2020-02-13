@@ -1,14 +1,25 @@
 ---
-title: Database(2) - RocksDB
+title: 为什么不使用 RocksDB 做 StateBackend
 date: 2019-07-23 03:24:13
-keywords: RocksDB
-categories: Database
+keywords: 
+	- RocksDB
+	- Apache Flink
+categories: 
+	- Database
+	- Apache Flink
 ---
 
-在轻量级数据库中，我们不得不提到 RocksDB。这是 Database 系列的第二篇，由于工作原因，距离第一篇已经比较遥远，RocksDB 在我的周围经常可以听到，比如作为 Flink 的状态存储介质，TiDB 基于 RocksDB 做了 Google Spanner 的分布式实现等。
+RocksDB 是目前最流行的轻量级嵌入式 KV 数据库，Flink 也基于 RocksDB 开发了 RocksDBStateBackend 来作大数据量下的状态存储。
 
-## Quick View
+# 背景
 
+RocksDB 经过很多的实践证明，其本身很不错，但是作为一个标准的 KV 数据库，用在 Flink 做状态存储中，很多场景都捉襟见肘。当然，目前 Flink 也并没有提供出更好的替代方案，但是通过阅读本文可以帮助开发者更好地理解在 RocksDBStateBackend 下遇到的很多问题。
+
+# RocksDB
+
+先简单了解一下 RocksDB，
+
+# RocksDB In Flink
 RocksDB 在性能上的目标：
 
 * 点查和范围查找都有不错的性能。
