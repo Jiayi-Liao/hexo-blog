@@ -75,4 +75,4 @@ asynchronous 即异步快照，这里是使用了一个 Copy-On-Write 的机制�
 
 # 引用
 
-[1]. https://cwiki.apache.org/confluence/display/FLINK/FLIP-50%3A+Spill-able+Heap+Keyed+State+Backend
+1. [FLIP-50: Spillable Heap State Backend](https://cwiki.apache.org/confluence/display/FLINK/FLIP-50%3A+Spill-able+Heap+Keyed+State+Backend)
