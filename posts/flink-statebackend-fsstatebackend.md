@@ -67,10 +67,20 @@ asynchronous 即异步快照，这里是使用了一个 Copy-On-Write 的机制�
 
 # 其他
 
-快照恢复的过程，可以简单等同于将 Hdfs 文件上的内容重新读取出来生成 StateMap。关于这个 StateBackend，因为缺点很明显，后续社区也有改善的方案[1]。方案思路也比较简单，假设所有 KeyGroup 下有些 KeyGroup 属于 hot data，有些属于 cold data，当内存装不下时，将 cold data 持久化到磁盘上。由于内存中的对象无法直接预估其大小，所以只能采用近似的方式：
+快照恢复的过程，可以简单等同于将 Hdfs 文件上的内容重新读取出来生成 StateMap。关于这个 StateBackend，因为缺点很明显，后续社区也有改善的方案[1]。方案思路也比较简单，假设所有 KeyGroup 下有些 KeyGroup 属于 hot data，有些属于 cold data，当内存装不下时，将 cold data 持久化到磁盘上。示意图如下：
 
-1. 判断 Heap Usage 
-2. 判断 GC Pause
+![spill-backend](http://www.liaojiayi.com/assets/spill-backend.png)
+
+这里引入了两个组件，HeapStatusMonitor 和 Spill / Load Manager，其中
+
+* HeapStatusMonitor: 由于内存中的对象无法直接预估其大小，所以只能采用近似的方式：
+	* 判断 Heap Usage 
+	* 判断 GC Pause
+* Spill / Load Manager:
+	* 统计每个 KeyGroup 下的 size 和 request rate
+	* 以 KeyGroup 为粒度 Spill / Load StateMap 的数据
+
+个人认为这个设计的主要难点可能是以什么粒度来区分冷热数据，最终使用 KeyGroup 来区分，可能对于默认的 65536 个 KeyGroup 来说，这里的粒度还是有点过粗了，不过可以通过调整 maxParallelism 来辅助调整持久化的粒度，总体来说，是 HeapKeyedStateBackend 的替代版本，完全可以通过参数控制来讲 SpillableHeapKeyedStateBackend 来达到和 HeapKeyedStateBackend 一样的功能。
 
 
 # 引用
