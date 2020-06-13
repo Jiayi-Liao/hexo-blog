@@ -23,10 +23,21 @@ Flink 中 Network Buffer 相关知识。
 
 # 用途
 
+Network Buffer，顾名思义，就是在网络传输中使用到的 Buffer（实际非网络传输也会用到）。了解 Flink 网络栈的同学应该会比较清楚，Flink 经过网络传输的上下游 Task 的设计会比较类似生产者 - 消费者模型。如果没有这个缓冲区，那么生产者或消费者会消耗大量时间在等待下游拿数据和上游发数据的环节上。加上这个缓冲区，生产者和消费者解耦开，任何一方短时间内的抖动理论上对另一方的数据处理都不会产生太大影响。
+
+![Flink network 生产者消费者模型](http://www.liaojiayi.com/assets/flink-network-buffer-p-c.png)
+
+这是对于单进程内生产者-消费者模型的一个图示，事实上，如果两个 Task 在同一个 TaskManager 内，那么使用的就是上述模型，那么对于不同 TM 内、或者需要跨网络传输的 TM 之间，是如何利用生产者-消费者模型来进行数据传输的呢？
+
+如果之前看过 [credit-based 机制介绍](https://flink.apache.org/2019/06/05/flink-network-stack.html) 的同学可能对接收端的 buffer 池会比较了解，我们将发送端和接收端连起来看看，
+
+![Flink 网络栈介绍](http://www.liaojiayi.com/assets/flink-network-credit.png)
+
+可以看到，在 Netty Server 端，buffer 只存在 LocalBufferPool 中，subpartition 自己并没有缓存 buffer 或者独享一部分 buffer（这样的问题我在 [Flink网络栈中反压机制的优化](http://www.liaojiayi.com/flink-network-stack-opt/) 中有提到过），而在接收端，channel 有自己独享的一部分 buffer(Exclusive Buffers)，也有一部分共享的 buffer(Floating Buffers)，所以，Network Buffer 的使用同时存在于发送端和接收端。
+
+
+
+
 
 # 使用
 
-1. Network Buffer 如何计算？
-2. Network Buffer 存在哪里？
-3. Network Buffer 存在的意义？
-4. Network Buffer 过去是如何指定的，以及现在是如何指定的？
