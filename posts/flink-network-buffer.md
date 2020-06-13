@@ -35,9 +35,16 @@ Network Buffer，顾名思义，就是在网络传输中使用到的 Buffer（�
 
 可以看到，在 Netty Server 端，buffer 只存在 LocalBufferPool 中，subpartition 自己并没有缓存 buffer 或者独享一部分 buffer（这样的问题我在 [Flink网络栈中反压机制的优化](http://www.liaojiayi.com/flink-network-stack-opt/) 中有提到过），而在接收端，channel 有自己独享的一部分 buffer(Exclusive Buffers)，也有一部分共享的 buffer(Floating Buffers)，所以，Network Buffer 的使用同时存在于发送端和接收端。
 
+下面我们举例来看看，我们常见的 Network Segment 是如何计算的。以下图作业为例，
 
+xxx
 
+所以，network buffers 占用内存的计算公式为：
 
 
 # 使用
+
+## 内存调整
+
+## 指标监控
 
