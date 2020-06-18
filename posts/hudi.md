@@ -41,16 +41,38 @@ Hudi 是 Uber 主导开发的开源数据湖框架。所以大部分的出发点
 
 在增量模型中，Hudi 提供了两种 Table，分别为 Copy-On-Write 和 Merge-On-Read 两种。
 
+## Copy-On-Write Table
 对于 Copy-On-Write Table，用户的 update 会重写数据所在的文件，所以是一个写放大很高，但是读放大为 0，适合写少读多的场景。对于这种 Table，提供了两种查询：
 
-* Snapshot Query:
-* Incrementabl Query:
+* Snapshot Query: 查询最近一次 snapshot 的数据，也就是最新的数据。
+* Incrementabl Query:用户需要指定一个 commit time，然后 Hudi 会扫描文件中的记录，过滤出 commit_time > 用户指定的 commit time 的记录。
+
+具体的流程见下图 gif:
 
 ![Copy On Write Table](http://www.liaojiayi.com/assets/hudi-cow-1.gif)
+
+## Merge-On-Read Table
+对于 Merge-On-Read Table，整体的结构有点像 LSM-Tree，用户的写入先写入到 delta data 中，这部分数据使用行存，这部分 delta data 可以手动 merge 到存量文件中，整理为 parquet 的列存结构。对于这类 Tabel，提供了三种查询：
+
+* Snapshot Query: 查询最近一次 snapshot 的数据，也就是最新的数据。这里是一个行列数据混合的查询。
+* Incrementabl Query:用户需要指定一个 commit time，然后 Hudi 会扫描文件中的记录，过滤出 commit_time > 用户指定的 commit time 的记录。这里是一个行列数据混合的查询。
+* Read Optimized Query: 只查存量数据，不查增量数据，因为使用的都是列式文件格式，所以效率较高。
+
+具体的流程见下图 gif:
 
 ![Merge On Read Table](http://www.liaojiayi.com/assets/hudi-mor-2.gif)
 
 # 想法
+
+关于上述的内容，Hudi 自身提供了一个比较便捷的 [Docker Demo](https://hudi.apache.org/docs/docker_demo.html)，让用户可以很快地上手。
+
+谈到数据湖框架，大家都会说出现在比较流行的三个开源软件，分别为 Delta Lake、Apache Hudi 和 Apache Iceberg。虽然经常把他们拿来一起比较，但是实际上每个框架的背景都是不一样的。
+
+比如 Iceberg 的初衷是解决 Netflix 内部文件格式混乱的问题，Hive Table 中即可能是 csv，也可能是 parquet 文件格式，用户在做一些 metadata 的修改时，需要清楚的知道自己所操作 Table 的很多属性，针对这个痛点，Iceberg 提出了 everything can be a table 的概念，期望用 Iceberg Table 来统一所有的 Table。
+
+而 Hudi 提出的则是批流两种计算模型的折中方案，Delta 我了解的不算太多，但是总体跟 Hudi 比较类似。目前 Apache Iceberg 也在积极地做 Row-Level Update，也就是类似 Hudi 的 upsert 功能。
+
+虽然出发点不同，但是三种框架无一例外都是指向了 Hive 这个统治数仓数十年，但是数十年来变化并不大的框架，随着数十年来 Hadoop 生态的发展，Hadoop 生态支持的数据量、数据类型都有一个很大的提升，以 Hive 做数仓必然是比较简单，但是 Hive 本身对 Table 中的内容掌控度是比较小的。以仓储为例，Hive 相当于只是提供了一个仓库，但是没有利用仓库中的内容去做一些优化，大家只是把东西放到仓库里，但是仓库的东西一多，大家找东西就会比较乱，而新兴的数据湖框架，既提供了一个仓库的功能，同时还给仓库配上了标签信息、监控工具、智能运输等功能，即使仓库装的很满，用户也可以轻松根据标签定位到具体的货架。
 
 # 引用
 
