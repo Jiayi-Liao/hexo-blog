@@ -4,7 +4,7 @@ tags:
   - Flink
   - network
 articleId: flink-network-buffer
-categories: Apache Flink StateBackend
+categories: Apache Flink
 keywords:
   - Flink
   - network
