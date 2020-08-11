@@ -1,4 +1,4 @@
-title: 【苏世民-我的经验和教训】
+title: <<苏世民-我的经验和教训>> 读书笔记
 author: Liao Jiayi
 tags:
   - 苏世民
