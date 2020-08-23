@@ -45,18 +45,19 @@ Network Buffer，顾名思义，就是在网络传输中使用到的 Buffer（�
 
 | 参数                              | 含义                      | 默认值 |
 | ----------------------------------- | --------------------------- | ------ |
-| containerized.heap-cutoff-ratio     | JVM non-heap 部分使用的内存 | 0.25   |
+| containerized.heap-cutoff-ratio     | JVM cut-off 部分使用的内存 | 0.25   |
 | taskmanager.network.memory.fraction | Network Buffer 使用的内存 | 0.1    |
 | taskmanager.memory.segment-size     | Network Buffer 的大小    | 32kb   |
 
 不同版本中的参数名称和默认值可能不一致，以上述默认参数为例，假如我们有一个 2g 的 TaskManager，那么各部分对应的内存数值为：
 
-* JVM non-heap 内存 = 2g * `containerized.heap-cutoff-ratio`
-* JVM heap 内存 = `JVM non-heap 内存` - `JVM non-heap 内存` * (1 - `taskmanager.network.memory.fraction`)
-* Network Buffer 内存 = `JVM non-heap 内存` * `taskmanager.network.memory.fraction`
+* JVM cut-off 内存 = 2g * `containerized.heap-cutoff-ratio`
+* JVM heap 内存 = (2g - `JVM cut-off 内存`) * (1 - `taskmanager.network.memory.fraction`)
+* JVM non-heap 内存 = 2g - JVM heap 内存
+* Network Buffer 内存 = (2g - `JVM cut-off 内存`) * `taskmanager.network.memory.fraction`
 * Network Segments 个数 = `Network Buffer 内存` / `taskmanager.memory.segment-size`
 
-其中，JVM non-heap 内存和 Network Buffer 内存都会以 Direct Memory 的形式存在。计算得到的 Network Segements 个数会存放到 TaskManager 管理的 NetworkBufferPool 中，Task 中使用的 Network Buffer 都需要先向 NetworkBufferPool 进行申请，如果无法申请到，就会出现 `insufficient number of network buffers` 的错误。
+其中，JVM cut-off 内存和 Network Buffer 内存都会以 Direct Memory 的形式存在。计算得到的 Network Segements 个数会存放到 TaskManager 管理的 NetworkBufferPool 中，Task 中使用的 Network Buffer 都需要先向 NetworkBufferPool 进行申请，如果无法申请到，就会出现 `insufficient number of network buffers` 的错误。
 
 既然总的 Network Buffers 数量有了，那么实际需要的 Network Buffer 该如何计算呢？拆成发送端和接收端两部分来看：
 
