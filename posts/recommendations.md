@@ -166,12 +166,12 @@ n(u,b) 表示用户 u 打标签 b 的次数，n(b,i) 表示物品 i 被打标签
 
 我们将每一种特征的处理抽象成推荐引擎，做成插拔式的架构，通过所有推荐引擎的返回结果进行过滤、排序，最后生成推荐结果。
 
-![r-xdfxx2](http://www.liaojiayi.com/assets/rec-arch3.png)
+![r-xdfxx2](http://www.liaojiayi.com/assets/rec-arch3.jpg)
 
 
 每个具体推荐引擎的架构：
 
-![r-xdfxx2](http://www.liaojiayi.com/assets/rec-arch4.png)
+![r-xdfxx2](http://www.liaojiayi.com/assets/rec-arch4.jpg)
 
 看到这里其实就已经比较清晰了，需要特别考虑下面几个点：
 
@@ -180,8 +180,12 @@ n(u,b) 表示用户 u 打标签 b 的次数，n(b,i) 表示物品 i 被打标签
 * 行为次数
 * 热门程度
 
+# 总结
 
 
+![r-xxx2](http://www.liaojiayi.com/assets/rec-arch.png)
+
+总之呢，记住这张图。
 
 
 
