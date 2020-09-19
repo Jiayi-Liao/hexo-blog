@@ -27,7 +27,7 @@ Flink 中每个 Task 的输出会以 IntermediateResult 做封装，内部并没
 
 在了解数据交换模型之前，我们来看下为什么 Flink 对作业类型不作区分，这样的好处是什么？
 
-![unify-example](http://www.liaojiayi.com/assets/unify-example.png)
+![unify-example](http://www.liaojiayi.com/assets/unify-example2.png)
 
 如上图所示，假如我们有一个工作需要将批式作业执行结果作为流式作业的启动输入，那怎么办？这个作业是算批作业还是流作业？
 
