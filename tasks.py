@@ -5,7 +5,7 @@ from password import *
 
 
 @task
-def blogpic(c, src):
+def blogpic(c, src, password):
     conn = Connection(host='101.200.171.13', user='root',
                       connect_kwargs={"password": password})    
     file = src.split("/")[-1]
